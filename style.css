@@ -1,0 +1,204 @@
+:root {
+    /* Layout */
+    --layout-mobile-width: 375px;
+    --layout-desktop-width: 1440px;
+  
+    /* Colors */
+    --color-primary-desaturated-red: hsl(0, 36%, 70%);
+    --color-primary-soft-red: hsl(0, 93%, 68%);
+    
+    --color-neutral-dark-grayish-red: hsl(0, 6%, 24%);
+  
+    /* Gradients */
+    --gradient-light: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --gradient-soft-red: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  
+    /* Typography */
+    --font-body-size: 16px;
+    --font-family-josefin-sans: 'Josefin Sans', sans-serif;
+  
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+  }
+  
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-josefin-sans);
+    font-size: var(--font-body-size);
+    color: var(--color-neutral-dark-grayish-red);
+  }
+
+
+/* FORM-IDS */
+#myInput {
+    padding-right: 40px; /* Add padding to make space for the icon */
+    border: 1px solid #ccc; /* Default border color */
+}
+
+#myInput.error {
+    border-color: red; /* Red border when there's an error */
+}
+
+.hero-container {
+    display: flex;
+    height: 100vh;
+  }
+
+.content {
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-top: 5rem;
+  }
+.content > h1 {
+    font-size:7rem;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.content > h1 > span {
+    color: var(--color-primary-desaturated-red);
+}
+
+.content > p {
+    color: var(--color-primary-desaturated-red);
+    text-align:left;
+    text-wrap: wrap;
+}
+
+/* FORM */
+.input-wrapper > input {
+    width: 40%;
+    padding: 1rem;
+    border-radius: 25px;
+    border: 2px solid red;
+}
+.error-icon {
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 20%;
+    bottom: 8%;
+}
+.click-btn {
+    width: 10%;
+    padding: 1rem;
+    border-radius: 25px;
+    position: relative;
+    left: -10%;
+    top: 10%;
+}
+.click-btn img {
+    width: 20px; /* Adjust icon size as needed */
+    height: auto;
+}
+
+.error-message {
+    display: none; /* Hidden by default */
+    color: red;
+    font-size: 14px;
+}
+
+.hero-container > img{
+    width: 50%;
+    height: 100%;
+    background-image: url('/images/hero-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* MEDIA-QUIERIES */
+
+/* Extra small devices (phones, less than 375px) */
+@media (max-width: 374px) {
+   .hero-container {
+    height: auto;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+   }
+
+   .logo {
+    width: 100%;
+    order: 1; /* Ensure logo stays at the top */
+  }
+
+  .hero-container > img {
+    width: 100%;
+    height: auto;
+    order: 2; /* Move image below content */
+  }
+   .content {
+    width: 100%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    order: 3;/* Move content below the logo */
+  }
+  }
+  
+  /* Small devices (phones, 375px to 599px) */
+  @media (min-width: 375px) and (max-width: 599px) {
+    .hero-container {
+        height: auto;
+        align-items: center;
+        flex-direction: column; /* Stack elements vertically */
+       }
+    
+       .logo {
+        width: 100%;
+        order: 1; /* Ensure logo stays at the top */
+      }
+    
+      .hero-container > img {
+        width: 100%;
+        height: auto;
+        order: 2; /* Move image below content */
+      }
+       .content {
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        order: 3;/* Move content below the logo */
+      }
+  }
+  
+  /* Medium devices (portrait tablets, 600px to 767px) */
+  @media (min-width: 600px) and (max-width: 767px) {
+    /* Styles for medium devices */
+  }
+  
+  /* Large devices (landscape tablets and small laptops, 768px to 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for large devices */
+  }
+  
+  /* Extra large devices (laptops and desktops, 1024px to 1279px) */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    /* Styles for extra large devices */
+  }
+  
+  /* 2X large devices (large desktops, 1280px to 1439px) */
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    /* Styles for 2X large devices */
+  }
+  
+  /* 3X large devices (ultra-wide desktops, 1440px and up) */
+  @media (min-width: 1440px) {
+    /* Styles for 3X large devices */
+  }
+  
